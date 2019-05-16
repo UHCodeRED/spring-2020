@@ -27,6 +27,10 @@ h3 {
   font-size: 20px;
 }
 
+img {
+  object-fit: contain;
+}
+
 .container {
   max-width: 960px;
   padding: 0 32px !important;
