@@ -5,6 +5,10 @@ body {
   font-weight: 300;
 }
 
+::selection {
+  background: rgba(203, 0, 0, 0.5);
+}
+
 strong {
   font-weight: 500;
 }
