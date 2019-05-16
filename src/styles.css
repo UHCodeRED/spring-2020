@@ -54,6 +54,7 @@ img {
 }
 
 .event-info {
+  position: relative;
   flex: 1;
   padding: 16px;
   width: 100%;
