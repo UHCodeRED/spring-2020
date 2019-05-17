@@ -52,9 +52,6 @@ function hasLowVariety(options) {
 }
 
 function getOptions() {
-  const noiseRange = getRandomArbitrary(-3.5, 3.5);
-  // const floor = !!Math.round(getRandomArbitrary(0, 1));
-  // const floor = Math.abs(noiseRange) >= 1;
   const segments = getRandomArbitrary(100, 200);
   const perlinPasses = 1;
   // const perlinPasses =
@@ -62,7 +59,7 @@ function getOptions() {
 
   const options = {
     elevation: getRandomArbitrary(-1, 2),
-    noise_range: noiseRange,
+    noise_range: getRandomArbitrary(-3.5, 3.5),
     sombrero_amplitude: getRandomArbitrary(),
     sombrero_frequency: getRandomArbitrary(10, 20),
     speed: getRandomArbitrary(0.25, 0.35),
@@ -70,12 +67,7 @@ function getOptions() {
     wireframe_color: "#888",
     perlin_passes: perlinPasses,
     wireframe: true
-    // floor_visible: floor
   };
-
-  if (hasLowVariety(options)) {
-    options.floor_visible = hasLowVariety();
-  }
 
   if (getNetAltitude(options) < 1) {
     return getOptions();
@@ -277,7 +269,7 @@ class Terrain {
       specular: 0x050505
     });
 
-    this.groundMaterial.visible = this.options.floor_visible;
+    this.groundMaterial.visible = false;
 
     this.groundMaterial.color.setHSL(0.095, 1, 0.75);
 
