@@ -114,7 +114,7 @@ class App {
       },
       {
         root: null,
-        rootMargin: "0px",
+        rootMargin: "20px 0px",
         threshold: 0
       }
     );
@@ -176,9 +176,9 @@ class App {
   }
 
   renderScene() {
-    if (this.resizeId) return;
+    // Don't render while resizing or while the scene isn't in view
+    if (this.resizeId || this.isInView === false) return;
 
-    // TODO: Only render when in view
     return this.renderer.render(this.scene, this.camera);
   }
 
