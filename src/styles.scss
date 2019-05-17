@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   position: relative;
 }
 
@@ -45,7 +47,9 @@ img {
   padding: 0 32px !important;
 }
 
-.gradient, .middle-gradient, .background {
+.gradient,
+.middle-gradient,
+.background {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -121,6 +125,11 @@ img {
     color: white;
     background-color: rgba(255, 255, 255, 0.2);
     text-decoration: none;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1),
       opacity 0.25s linear;
 
@@ -175,8 +184,6 @@ img {
       }
     }
   }
-
-  
 }
 
 #about {
