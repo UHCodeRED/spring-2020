@@ -102,9 +102,11 @@ class App {
     this.update = this.update.bind(this);
     this.renderScene = this.renderScene.bind(this);
     this.resize = this.resize.bind(this);
+    this.resizeId = null;
 
     window.addEventListener("resize", () => {
-      this.resize(window.innerWidth, this.height);
+      clearTimeout(this.resizeId);
+      this.resizeId = setTimeout(this.resize, 100);
     });
   }
 
@@ -157,14 +159,21 @@ class App {
   }
 
   renderScene() {
+    if (this.resizeId) return;
+
     // TODO: Only render when in view
     return this.renderer.render(this.scene, this.camera);
   }
 
-  resize(stageWidth, stageHeight) {
+  resize() {
+    const stageWidth = window.innerWidth;
+    const stageHeight = this.height;
+
     this.camera.aspect = stageWidth / stageHeight;
 
     this.camera.updateProjectionMatrix();
+
+    this.resizeId = null;
 
     return this.renderer.setSize(stageWidth, stageHeight);
   }
