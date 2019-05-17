@@ -16,6 +16,8 @@ import seed from "seed-random";
 import SombreroShader from "./shaders/sombrero.shader";
 import TerrainShader from "./shaders/terrain.shader";
 
+import "intersection-observer";
+
 seed(Date.now(), { global: true, entropy: true });
 
 function getRandomArbitrary(min = 0, max = 1) {
@@ -79,9 +81,9 @@ function getOptions() {
 let options = getOptions();
 
 class App {
-  constructor(elementId, height) {
+  constructor(element, height) {
     this.canvasGL = null;
-    this.elementId = elementId;
+    this.element = element;
     this.container = null;
     this.scene = null;
     this.height = height;
@@ -103,6 +105,21 @@ class App {
     this.renderScene = this.renderScene.bind(this);
     this.resize = this.resize.bind(this);
     this.resizeId = null;
+    this.isInView = false;
+    this.observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach(entry => {
+          this.isInView = entry.intersectionRatio > observer.thresholds[0];
+        });
+      },
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0
+      }
+    );
+
+    this.observer.observe(this.element);
 
     window.addEventListener("resize", () => {
       clearTimeout(this.resizeId);
@@ -141,7 +158,7 @@ class App {
 
     this.camera.lookAt(new Vector3());
 
-    document.getElementById(this.elementId).appendChild(this.container);
+    this.element.appendChild(this.container);
 
     this.terrain = new Terrain(this.scene);
 
@@ -301,5 +318,10 @@ class Terrain {
   }
 }
 
-new App("background", 800).init();
-new App("footer-background", 300).init();
+const mainBackground = document.getElementById("background");
+
+new App(mainBackground, 800).init();
+
+const footerBackground = document.getElementById("footer-background");
+
+new App(footerBackground, 300).init();

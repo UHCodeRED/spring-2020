@@ -8,6 +8,7 @@
     "build": "parcel build index.html && cp -R ./assets ./dist/assets"
   },
   "dependencies": {
+    "intersection-observer": "^0.7.0",
     "seed-random": "2.2.0",
     "three": "0.103.0"
   },
