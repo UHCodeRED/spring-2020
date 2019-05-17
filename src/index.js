@@ -87,10 +87,12 @@ function getOptions() {
 let options = getOptions();
 
 class App {
-  constructor() {
+  constructor(elementId, height) {
     this.canvasGL = null;
+    this.elementId = elementId;
     this.container = null;
     this.scene = null;
+    this.height = height;
     this.camera = null;
     this.renderer = null;
     this.geometry = null;
@@ -111,7 +113,7 @@ class App {
     this.resize = this.resize.bind(this);
 
     window.addEventListener("resize", () => {
-      this.resize(window.innerWidth, 800);
+      this.resize(window.innerWidth, this.height);
     });
   }
 
@@ -136,7 +138,7 @@ class App {
       antialias: false
     });
 
-    this.renderer.setSize(window.innerWidth, 800);
+    this.renderer.setSize(window.innerWidth, this.height);
 
     this.container = document.createElement("div");
 
@@ -146,7 +148,7 @@ class App {
 
     this.camera.lookAt(new Vector3());
 
-    document.getElementById("background").appendChild(this.container);
+    document.getElementById(this.elementId).appendChild(this.container);
 
     this.terrain = new Terrain(this.scene);
 
@@ -164,6 +166,7 @@ class App {
   }
 
   renderScene() {
+    // TODO: Only render when in view
     return this.renderer.render(this.scene, this.camera);
   }
 
@@ -370,4 +373,5 @@ class Terrain {
   }
 }
 
-new App().init();
+new App("background", 800).init();
+new App("footer-background", 300).init();
