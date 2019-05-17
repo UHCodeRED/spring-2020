@@ -98,7 +98,6 @@ class App {
     this.geometry = null;
     this.material = null;
     this.mesh = null;
-    this.gui = null;
     this.terrain = null;
     this.composer = null;
     this.render_pass = null;
@@ -191,7 +190,6 @@ class Terrain {
     this.scene = null;
 
     this.init = this.init.bind(this);
-    this.initGUI = this.initGUI.bind(this);
     this.togglePerlin = this.togglePerlin.bind(this);
     this.buildPlanes = this.buildPlanes.bind(this);
     this.update = this.update.bind(this);
@@ -253,77 +251,6 @@ class Terrain {
     const logo = document.getElementById("logo");
 
     logo.addEventListener("dblclick", this.togglePerlin);
-
-    if (process.env.NODE_ENV !== "production") {
-      // this.initGUI();
-    }
-  }
-
-  async initGUI() {
-    const dat = await import("dat.gui");
-    this.gui = new dat.GUI();
-
-    this.gui.values = {};
-
-    this.gui.values.speed = this.gui
-      .add(this.options, "speed", -5, 5)
-      .step(0.01);
-
-    this.gui.values.speed.onChange(value => {
-      this.uniforms.speed.value = value;
-    });
-
-    this.gui.values.segments = this.gui
-      .add(this.options, "segments", 20, 800)
-      .step(1);
-
-    this.gui.values.segments.onFinishChange(value => {
-      this.scene.remove(this.plane_mesh);
-
-      this.buildPlanes(value);
-
-      this.scene.add(this.plane_mesh);
-    });
-
-    this.gui.values.perlin_passes = this.gui
-      .add(this.options, "perlin_passes", 1, 3)
-      .step(1);
-
-    this.gui.values.perlin_passes.onChange(value => {
-      this.uniforms.perlin_passes.value = value;
-    });
-
-    this.gui.values.elevation = this.gui
-      .add(this.options, "elevation", -10, 10)
-      .step(0.01);
-
-    this.gui.values.elevation.onChange(value => {
-      this.uniforms.elevation.value = value;
-    });
-
-    this.gui.values.noise_range = this.gui
-      .add(this.options, "noise_range", -10, 10)
-      .step(0.01);
-
-    this.gui.values.noise_range.onChange(value => {
-      this.uniforms.noise_range.value = value;
-    });
-
-    this.gui.values.sombrero_amplitude = this.gui
-      .add(this.options, "sombrero_amplitude", -5, 5)
-      .step(0.1);
-
-    this.gui.values.sombrero_amplitude.onChange(value => {
-      this.uniforms.sombrero_amplitude.value = value;
-    });
-
-    this.gui.values.sombrero_frequency = this.gui
-      .add(this.options, "sombrero_frequency", 0, 100)
-      .step(0.1);
-
-    this.gui.values.sombrero_frequency.onChange(value => {
-      this.uniforms.sombrero_frequency.value = value;
-    });
   }
 
   togglePerlin() {
