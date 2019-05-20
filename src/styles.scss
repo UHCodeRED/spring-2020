@@ -110,6 +110,11 @@ img {
     border-color: rgba(203, 0, 0, 0.75);
     color: rgba(255, 255, 255, 0.8);
 
+    &::before,
+    &::after {
+      opacity: 0.8;
+    }
+
     &:hover {
       background-color: rgba(203, 0, 0, 0.7);
       border-color: rgba(203, 0, 0, 0.9);
