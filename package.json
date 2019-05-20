@@ -18,6 +18,7 @@
     "@babel/plugin-transform-runtime": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
     "parcel-bundler": "^1.6.1",
+    "parcel-plugin-purgecss": "2.1.2",
     "sass": "^1.20.1"
   },
   "keywords": []
