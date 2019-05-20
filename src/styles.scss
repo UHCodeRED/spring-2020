@@ -108,7 +108,8 @@ img {
       border-color: rgba(203, 0, 0, 0.9);
     }
 
-    &:focus, &:active {
+    &:focus,
+    &:active {
       background-color: rgba(203, 0, 0, 0.6);
       border-color: rgba(203, 0, 0, 0.8);
     }
@@ -234,12 +235,22 @@ img {
 
     #past-sponsors {
       position: absolute;
+      background-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 0) 50%,
+          rgba(0, 0, 0, 1) 100%
+        ),
+        url("../assets/images/f19-sponsors-placeholder-bw-full.png");
+
+      background: center center no-repeat cover;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
       opacity: 0.2;
-      filter: invert(100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+      // filter: invert(100%);
       z-index: -1;
     }
   }
