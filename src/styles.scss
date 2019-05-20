@@ -81,7 +81,7 @@ img {
 
 .arrow-btn {
   display: inline-block;
-  padding: 1rem 2rem;
+  padding: 1rem 2.5rem;
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.5);
   color: $white;
@@ -94,6 +94,16 @@ img {
   text-transform: uppercase;
   animation: float-down 3s cubic-bezier(0.165, 0.84, 0.44, 1), fade-in 3s linear;
   animation: zoom-in 2s cubic-bezier(0.165, 0.84, 0.44, 1), fade-in 2s linear;
+
+  &.btn-sm {
+    font-size: 1.25rem;
+
+    &::before,
+    &::after {
+      height: 1.25rem;
+      width: 1.25rem;
+    }
+  }
 
   &.primary {
     background-color: rgba(203, 0, 0, 0.5);
@@ -224,10 +234,6 @@ img {
     #sponsor-pitch {
       max-width: 48rem;
       z-index: 1;
-    }
-
-    #learn-more {
-      min-width: 20rem;
     }
 
     #past-sponsors {
