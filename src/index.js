@@ -324,4 +324,4 @@ new App(mainBackground, 800).init();
 
 const footerBackground = document.getElementById("footer-background");
 
-new App(footerBackground, 300).init();
+new App(footerBackground, 320).init();

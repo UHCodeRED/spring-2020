@@ -1,41 +1,23 @@
+@import "./scss/functions";
+@import "./scss/variables";
+
 *,
 *::before,
 *::after {
   position: relative;
 }
 
-body {
-  background: black;
-  color: white;
-  font-family: Roboto, sans-serif;
-  font-size: 20px;
-  font-weight: 300;
-}
-
 ::selection {
-  background: rgba(203, 0, 0, 0.5);
-}
-
-strong {
-  font-weight: 500;
+  background: $red;
 }
 
 h1,
 h2,
 h3 {
-  text-align: center;
   width: 100%;
-  padding-top: 40px;
-  padding-bottom: 20px;
-  font-weight: 500;
+  text-align: center;
   text-transform: uppercase;
-  letter-spacing: 4px;
-}
-
-h3 {
-  font-size: 24px;
-  padding-top: 0;
-  padding-bottom: 8px;
+  letter-spacing: 0.25rem;
 }
 
 img {
@@ -43,8 +25,8 @@ img {
 }
 
 .container {
-  max-width: 960px;
-  padding: 0 32px !important;
+  max-width: 60rem;
+  padding: 0 2rem !important;
 }
 
 .gradient,
@@ -62,7 +44,7 @@ img {
 .gradient,
 .top-gradient {
   width: 100%;
-  height: 100px;
+  height: 8rem;
   z-index: 0;
 }
 
@@ -83,6 +65,12 @@ img {
   z-index: 1;
 }
 
+.top-gradient {
+  bottom: auto;
+  background: linear-gradient(to top, transparent 0%, black 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 );
+}
+
 .background {
   z-index: -1;
   overflow: hidden;
@@ -90,12 +78,12 @@ img {
 
 .arrow-btn {
   display: inline-block;
-  padding: 12px 36px;
+  padding: 1rem 2rem;
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.5);
   color: rgba(255, 255, 255, 0.9);
-  font-size: 24px;
-  letter-spacing: 6px;
+  font-size: 1.5rem;
+  letter-spacing: 0.5rem;
   line-height: 1;
   font-weight: 600;
   font-variant: normal;
@@ -109,21 +97,21 @@ img {
     display: inline-block;
     position: absolute;
     transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-    height: 24px;
-    width: 24px;
+    height: 1.5rem;
+    width: 1.5rem;
     filter: invert(100%);
   }
 
   &::before {
-    left: 16px;
+    left: 1rem;
     content: url("../assets/icons/ios-arrow-forward.svg");
-    transform: translateX(-8px);
+    transform: translateX(-0.5rem);
   }
 
   &::after {
-    right: 16px;
+    right: 1rem;
     content: url("../assets/icons/ios-arrow-back.svg");
-    transform: translateX(8px);
+    transform: translateX(0.5rem);
   }
 
   &:hover {
@@ -158,7 +146,7 @@ img {
 }
 
 #landing {
-  height: 800px;
+  height: 50rem;
   max-height: 100vh;
   width: 100%;
 
@@ -173,19 +161,19 @@ img {
 
     .event-info {
       flex: 1;
-      padding: 16px;
+      padding: 1rem;
       width: 100%;
-      max-width: 360px;
+      max-width: 24rem;
       text-transform: uppercase;
-      letter-spacing: 4px;
+      letter-spacing: 0.25rem;
 
       .coming-soon {
-        padding: 12px 36px;
+        padding: 1rem 2rem;
         background-color: rgba(255, 255, 255, 0.1);
         border: 1px solid rgba(255, 255, 255, 0.5);
         color: white;
-        font-size: 24px;
-        letter-spacing: 6px;
+        font-size: 1.5rem;
+        letter-spacing: 0.35rem;
         line-height: 1.2;
         text-align: center;
       }
@@ -196,9 +184,9 @@ img {
 #about {
   #album-cover {
     // hack to maintain aspect ratio on safari
-    height: calc(960px / 3.8343558282);
+    height: calc(60rem / 3.8343558282);
 
-    @media screen and (max-width: 959px) {
+    @media screen and (max-width: 60rem) {
       height: calc(100vw / 3.8343558282);
     }
   }
@@ -209,6 +197,10 @@ img {
 }
 
 footer {
+  .background {
+    height: 20rem;
+  }
+
   .footer-content {
     z-index: 2;
   }
