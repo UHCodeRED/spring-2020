@@ -98,6 +98,22 @@ img {
   animation: float-down 3s cubic-bezier(0.165, 0.84, 0.44, 1), fade-in 3s linear;
   animation: zoom-in 2s cubic-bezier(0.165, 0.84, 0.44, 1), fade-in 2s linear;
 
+  &.primary {
+    background-color: rgba(203, 0, 0, 0.5);
+    border-color: rgba(203, 0, 0, 0.75);
+    color: rgba(255, 255, 255, 0.8);
+
+    &:hover {
+      background-color: rgba(203, 0, 0, 0.7);
+      border-color: rgba(203, 0, 0, 0.9);
+    }
+
+    &:focus, &:active {
+      background-color: rgba(203, 0, 0, 0.6);
+      border-color: rgba(203, 0, 0, 0.8);
+    }
+  }
+
   &::before,
   &::after {
     display: inline-block;
@@ -213,9 +229,6 @@ img {
     }
 
     #learn-more {
-      background-color: rgba(203, 0, 0, 0.5);
-      border-color: rgba(203, 0, 0, 0.75);
-      color: rgba(255, 255, 255, 0.8);
       min-width: 20rem;
     }
 
