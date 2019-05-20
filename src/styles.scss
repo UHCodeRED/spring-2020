@@ -108,19 +108,21 @@ img {
   &::after {
     display: inline-block;
     position: absolute;
-    font-weight: 300;
     transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    height: 24px;
+    width: 24px;
+    filter: invert(100%);
   }
 
   &::before {
-    left: 24px;
-    content: "〉";
+    left: 16px;
+    content: url("../assets/icons/ios-arrow-forward.svg");
     transform: translateX(-8px);
   }
 
   &::after {
     right: 16px;
-    content: "〈";
+    content: url("../assets/icons/ios-arrow-back.svg");
     transform: translateX(8px);
   }
 
