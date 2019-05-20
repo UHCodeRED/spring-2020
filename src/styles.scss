@@ -76,12 +76,18 @@ img {
   overflow: hidden;
 }
 
+// Hack to remove letter spacing on last letter
+// Most browsers do not follow the CSS spec for this
+.nls {
+  letter-spacing: initial;
+}
+
 .arrow-btn {
   display: inline-block;
   padding: 1rem 2rem;
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.5);
-  color: rgba(255, 255, 255, 0.9);
+  color: $white;
   font-size: 1.5rem;
   letter-spacing: 0.5rem;
   line-height: 1;
@@ -188,6 +194,39 @@ img {
 
     @media screen and (max-width: 60rem) {
       height: calc(100vw / 3.8343558282);
+    }
+  }
+}
+
+#sponsors {
+  #sponsor-cloud {
+    display: flex;
+    position: relative;
+    width: 60rem;
+    height: calc(60rem / 1.6);
+    justify-content: center;
+    align-items: center;
+
+    #sponsor-pitch {
+      z-index: 1;
+    }
+
+    #learn-more {
+      background-color: rgba(203, 0, 0, 0.5);
+      border-color: rgba(203, 0, 0, 0.75);
+      color: rgba(255, 255, 255, 0.8);
+      min-width: 20rem;
+    }
+
+    #past-sponsors {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0.3;
+      filter: invert(100%);
+      z-index: -1;
     }
   }
 }
