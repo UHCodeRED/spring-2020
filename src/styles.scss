@@ -208,6 +208,7 @@ img {
     align-items: center;
 
     #sponsor-pitch {
+      max-width: 48rem;
       z-index: 1;
     }
 
@@ -224,7 +225,7 @@ img {
       left: 0;
       right: 0;
       bottom: 0;
-      opacity: 0.3;
+      opacity: 0.25;
       filter: invert(100%);
       z-index: -1;
     }
