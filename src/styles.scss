@@ -18,6 +18,10 @@ h3 {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.25rem;
+  
+  .nls {
+    margin-right: -0.25rem;
+  }
 }
 
 img {
@@ -75,9 +79,6 @@ img {
 
 // Hack to remove letter spacing on last letter
 // Most browsers do not follow the CSS spec for this
-.nls {
-  letter-spacing: initial;
-}
 
 .arrow-btn {
   display: inline-block;
@@ -95,6 +96,10 @@ img {
   text-transform: uppercase;
   animation: float-down 3s cubic-bezier(0.165, 0.84, 0.44, 1), fade-in 3s linear;
   animation: zoom-in 2s cubic-bezier(0.165, 0.84, 0.44, 1), fade-in 2s linear;
+
+  .nls {
+    margin-right: -0.5rem;
+  }
 
   &.btn-sm {
     font-size: 1.25rem;
@@ -206,6 +211,10 @@ img {
       text-transform: uppercase;
       letter-spacing: 0.25rem;
 
+      .nls {
+        margin-right: -0.25rem;
+      }
+
       .coming-soon {
         padding: 1rem 2rem;
         background-color: rgba(255, 255, 255, 0.1);
@@ -215,6 +224,10 @@ img {
         letter-spacing: 0.35rem;
         line-height: 1.2;
         text-align: center;
+
+        .nls {
+          margin-right: -0.35rem;
+        }
       }
     }
   }
