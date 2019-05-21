@@ -28,6 +28,12 @@ img {
   object-fit: contain;
 }
 
+@media not screen and (-webkit-min-device-pixel-ratio:0) {
+  .nls {
+    margin-right: initial !important;
+  }
+}
+
 .container {
   max-width: 60rem;
   padding: 0 2rem !important;
