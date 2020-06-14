@@ -7,7 +7,7 @@ require('dotenv').config();
 
 console.log(process.env)
 const app = express();
-const PORT = process.env.PORT || 1234;
+const PORT = process.env.PORT
 
 app.use(bodyParser.urlencoded({extended : true}))
 app.use(express.static(__dirname + '/dist'))
