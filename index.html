@@ -7,8 +7,8 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <link rel="stylesheet" href="src/scss/bootstrap.scss" />
-    <link rel="stylesheet" type="text/css" href="src/styles.scss" />
+    <link rel="stylesheet" href="src/scss/bootstrap.scss"/>
+    <link rel="stylesheet" type="text/css" href="src/styles.scss"/>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Roboto:300,500,600"
@@ -25,7 +25,7 @@
         <div class="event-info">
           <img
             id="logo"
-            src="assets/codered-voyage-1.svg"
+            src="/assets/codered-voyage-1.svg"
             loading="eager"
             alt="CodeRED Voyage Logo"
           />
@@ -64,7 +64,7 @@
     <div class="modal" tabindex="-1" role="dialog" id="regModal">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <form id="regForm" autocomplete="off">
+          <form id="regForm" autocomplete="off" action="/" method="POST" enctype="multipart/form-data">
             <div class="modal-header">
               <h5 class="modal-title">Code RED Registration <br>
                 <span class="modal-sub-title">N/A wehre applicable</span> 
@@ -74,43 +74,47 @@
             <div class="modal-body">
               <div class="tab">
                 <div class="form-group mb-5">
-                  <input type="text" class="form-control" id="fname" autocomplete="off">
-                  <label for="fname" class="label">Name</label>
+                  <input type="text" class="form-control" id="name" autocomplete="off" name="name">
+                  <label for="name" class="label">Name</label>
                 </div>
                 <div class="form-group mb-5">
-                  <input type="text" class="form-control" id="school" autocomplete="off">
+                  <input type="text" class="form-control" id="school" autocomplete="off" name="school">
                   <label for="school" class="label">School</label>
                 </div>
                 <div class="form-group mb-5">
-                  <input type="text" class="form-control" id="location">
-                  <label for="location" class="label">City, State, Country</label>
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" id="email">
+                  <input type="text" class="form-control" id="email" name="email">
                   <label for="email" class="label">Email</label>
                 </div>
-              </div>
-              <div class="tab">
-                <div class="form-group mb-5">
-                  <input type="text" class="form-control" id="age" autocomplete="off">
-                  <label for="age" class="label">Age</label>
-                </div>
-                <div class="form-group mb-5">
-                  <input type="text" class="form-control" id="phoneNumber" autocomplete="off">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="phoneNumber" autocomplete="off" name="phoneNumber">
                   <label for="phoneNumber" class="label">Phone Number</label>
                 </div>
-                <div class="form-group mb-5" id="Gender">
+              </div> 
+              <div class="tab">
+                <div class="form-group mb-5">
+                  <input type="text" class="form-control" id="addressLine1" autocomplete="off" name="addressLine1" placeholder="Only if in US, to send swag!">
+                  <label for="age" class="label">Address Line 1</label>
+                </div>
+                <div class="form-group mb-5">
+                  <input type="text" class="form-control" id="addressLine1" autocomplete="off" name="addressLine2">
+                  <label for="addressLine1" class="label">Address Line 2</label>
+                </div>
+                <div class="form-group mb-5">
+                  <input type="text" class="form-control" id="age" autocomplete="off" name="age">
+                  <label for="age" class="label">Age</label>
+                </div>
+                <div class="form-group" id="Gender">
                   <p class="question">Gender</p>
                   <div class="form-check">
-                    <input type="radio" class="form-check-input" id="male" name="gender">
+                    <input type="radio" class="form-check-input" id="male" name="gender" value="male">
                     <label class="form-check-label" for="male" id="male-label">Male</label>
                   </div>
                   <div class="form-check">
-                    <input type="radio" class="form-check-input" id="female" name="gender">
+                    <input type="radio" class="form-check-input" id="female" name="gender" value="female">
                     <label class="form-check-label" for="female" id="female-label">Female</label>
                   </div>
                   <div class="form-check">
-                    <input type="radio" class="form-check-input" id="preferNotToSay" name="gender">
+                    <input type="radio" class="form-check-input" id="preferNotToSay" name="gender" value="N/A">
                     <label class="form-check-label" for="preferNotToSay" id="preferNotToSay-label">Prefer Not to Say</label>
                   </div>
                   <div class="form-check form-check-other">
@@ -119,8 +123,10 @@
                     <input type="text" class="form-check-other-text" name="gender" id="other-text-input" placeholder="Enter Here">
                   </div>
                 </div>
-                <div class="form-group">
-                  <select class="form-control select" id="raceEthnicity">
+              </div>
+              <div class="tab">
+                <div class="form-group mb-5">
+                  <select class="form-control select" id="raceEthnicity" name="raceEthnicity">
                     <option selected disabled class="default">Select One</option>
                     <option class="valid-answer" value="male">American Indian or Alaskan Native</option>
                     <option class="valid-answer" value="female">Asian</option>
@@ -133,10 +139,8 @@
                   </select>
                   <label for="raceEthnicity" class="label">Race Ethinicity</label>
                 </div>
-              </div>
-              <div class="tab">
                 <div class="form-group mb-5">
-                  <select class="form-control select" id=chr"education-level">
+                  <select class="form-control select" id="education-level" name="educationLevel">
                     <option selected disabled class="default">Select One</option>
                     <option class="valid-answer" value="freshman">High School</option>
                     <option class="valid-answer" value="sophmore">Undergrad</option>
@@ -147,7 +151,7 @@
                   <label for="educaction-level" class="label">Education Level</label>
                 </div>
                 <div class="form-group mb-5">
-                  <select class="form-control select" id=chr"grade-level">
+                  <select class="form-control select" id=chr"grade-level" name="gradeLevel">
                     <option selected disabled class="default">Select One</option>
                     <option class="valid-answer" value="freshman">Freshman</option>
                     <option class="valid-answer" value="sophmore">Sophmore</option>
@@ -158,7 +162,7 @@
                   <label for="grade-level" class="label">Grade Level</label>
                 </div>
                 <div class="form-group">
-                  <select class="form-control select" id="exp-level">
+                  <select class="form-control select" id="exp-level" name="codingLevel">
                     <option selected disabled class="default">Select One</option>
                     <option class="valid-answer">Beginner</option>
                     <option class="valid-answer">Novice</option>
@@ -172,47 +176,54 @@
                 <div class="form-group mb-5">
                   <p class="question">What Topics Will you work on?</p>
                   <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="mobile">
+                    <input type="checkbox" class="form-check-input" id="mobile" name="mobile">
                     <label class="form-check-label" for="mobile" id="mobile-label">Mobile (IOS/Android)</label>
                   </div>
                   <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="desktop">
+                    <input type="checkbox" class="form-check-input" id="desktop" name="desktop">
                     <label class="form-check-label" for="desktop">Desktop (Python, C#, etc.)</label>
                   </div>
                   <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="frontend_design">
+                    <input type="checkbox" class="form-check-input" id="frontend_design" name="frontend">
                     <label class="form-check-label" for="frontend_design">Frontend Design (HTML+JS+CSS)</label>
                   </div>
                   <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="backend">
+                    <input type="checkbox" class="form-check-input" id="backend" name="backend">
                     <label class="form-check-label" for="backend">Backend Design (Python, SQL, etc)</label>
                   </div>
                   <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="hardware">
+                    <input type="checkbox" class="form-check-input" id="hardware" name="hardware">
                     <label class="form-check-label" for="hardware">Hardware (Arduino, Breadboarding, etc.)</label>
                   </div>
                   <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="game_dev">
+                    <input type="checkbox" class="form-check-input" id="game_dev" name="gameDev">
                     <label class="form-check-label" for="game_dev">Game Development (Unity, Unreal, etc.)</label>
                   </div>
                   <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="cyber">
+                    <input type="checkbox" class="form-check-input" id="cyber" name="cyber">
                     <label class="form-check-label" for="cyber">Cyber Security (Netwrok Dev)</label>
                   </div>
                   <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="undecided">
+                    <input type="checkbox" class="form-check-input" id="undecided" name="undecided">
                     <label class="form-check-label" for="undecided">I don't know bruh!/</label>
                   </div>
                 </div>
               </div>
               <div class="tab">
                 <div class="form-group mb-5">
-                  <input type="text" class="form-control" id="fname" autocomplete="off">
-                  <label for="fname" class="label">Twitter</label>
+                  <input type="text" class="form-control" id="twitter" autocomplete="off" name="twitter">
+                  <label for="twitter" class="label">Twitter</label>
+                </div>
+                <div class="form-group mb-5">
+                  <input type="text" class="form-control" id="github" autocomplete="off" name="github">
+                  <label for="github" class="label">Github</label>
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" id="school" autocomplete="off">
-                  <label for="school" class="label">Github</label>
+                  <label class="label">Resume</label>
+                  <div class="random">
+                    <label for="resume" class="upload-file" id="uploadFile">Select a file</label>
+                    <input type="file" id="resume" autocomplete="off" name="resume">
+                  </div>
                 </div>
               </div>
             </div>
@@ -229,7 +240,7 @@
       <div class="row mt-4 pt-2">
         <img
           id="album-cover"
-          src="assets/images/album-cover-optimized.png"
+          src="/assets/images/album-cover-optimized.png"
           class="img-fluid"
           loading="eager"
           width="100%"
@@ -310,7 +321,7 @@
         <h3><span class="nls">Proudly sponsored by</span></h3>
         <div class="w-100 text-center">
           <img
-            src="assets/sponsors/BP_Helios_logo.svg"
+            src="/assets/sponsors/BP_Helios_logo.svg"
             loading="lazy"
             width="300"
           />
@@ -324,7 +335,7 @@
         <h3><span class="nls">Proudly organized and supported by</span></h3>
         <div class="w-100 text-center pad-com">
           <a href="http://miso411.com" rel="external" target="_blank" title="Guidance and Consulting by Miso411"><img
-            src="assets/miso-logo-light-pink.svg"
+            src="/assets/miso-logo-light-pink.svg"
             loading="lazy"
             width="300"
             alt="Miso411 Logo"
@@ -333,7 +344,7 @@
         </div>
         <div class="w-100 col text-center">
           <img
-            src="assets/partners/CougarCS.svg"
+            src="/assets/partners/CougarCS.svg"
             loading="lazy"
             width="300"
             alt="CougarCS Logo"
@@ -342,18 +353,17 @@
 
         <div class="w-100 col text-center">
         <a href="https://www.oreilly.com/pub/cpc/239130" rel="external" target="_blank"><img
-          src="assets/partners/OReilly_logo_rgb.svg"
+          src="/assets/partners/OReilly_logo_rgb.svg"
           loading="lazy"
           width="300"
         />
         </div>
-
       </div>
     </div>
     <footer class="text-center py-5">
       <div class="footer-content">
         <img
-          src="assets/cougar-360.png"
+          src="/assets/cougar-360.png"
           loading="lazy"
           alt="Polygon cougar head"
           width="120"

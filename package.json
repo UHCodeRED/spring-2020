@@ -2,12 +2,18 @@
   "name": "codered-voyage",
   "version": "1.0.0",
   "description": "",
-  "main": "index.html",
+  "main": "server.js",
   "scripts": {
-    "start": "parcel index.html --open",
+    "start": "node server.js",
+    "dev": "nodemon server.js",
     "build": "parcel build index.html && cp -R ./assets ./dist/assets"
   },
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.7-alpha.3",
+    "googleapis": "39",
     "intersection-observer": "^0.7.0",
     "seed-random": "2.2.0",
     "three": "0.103.0"
@@ -17,6 +23,7 @@
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/plugin-transform-runtime": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
+    "nodemon": "^2.0.4",
     "parcel-bundler": "^1.6.1",
     "parcel-plugin-purgecss": "2.1.2",
     "sass": "^1.20.1"

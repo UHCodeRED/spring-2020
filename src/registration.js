@@ -9,7 +9,7 @@ let currentTab = 0;
 registerBtn.addEventListener("click", openModal);
 closeBtn.addEventListener("click",closeModal);
 window.addEventListener("click",closeModal);
-submitBtn.addEventListener("click", closeModal);
+// submitBtn.addEventListener("click", closeModal);
 
 //styles select fields
 const selectArray = document.querySelectorAll(".form-control.select");
@@ -29,13 +29,12 @@ function resetSelectFields() {
 
 //open modal
 function openModal() {
-  console.log("Modal opened");
    modal.style.display = 'block';
    showTab(currentTab);
 }
 
 function closeModal(e) {
-  if(e.target == modal || e.target == closeBtn || e.target == submitBtn) {
+  if(e.target == modal || e.target == closeBtn) {
     modal.style.display = 'none';
     document.getElementById("regForm").reset();
     resetSelectFields();
@@ -88,16 +87,14 @@ function prevTab() {
 const genderGroup = document.querySelector("#Gender");
 const GenderOptions = genderGroup.querySelectorAll(".form-check-label");
 const otherOptionText = genderGroup.querySelector("#other-text-input");
-console.log(otherOptionText);
-GenderOptions.forEach((genderOption) => {
-  genderOption.addEventListener("click", () => {
-    if(genderOption.id == "other-label") {
+GenderOptions.forEach((item) => {
+  item.addEventListener("click", () => {
+    if(item.id == "other-label") {
       otherOptionText.style.display = "inline";
       otherOptionText.focus();
     }
     else {
       otherOptionText.style.display = "none";
-      otherOptionText.value = "";
     }
   })
 })
