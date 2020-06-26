@@ -98,3 +98,26 @@ GenderOptions.forEach((item) => {
     }
   })
 })
+
+//send post request to the server.
+registrationForm = document.getElementById('regForm');
+registrationForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+  let formData = new FormData(e.target);
+  fetch('https://radiant-tundra-50768.herokuapp.com/',{
+    method: 'POST',
+    body: formData,
+    mode: 'no-cors',
+    headers: {
+      'Content-Type' : 'application/json'
+    }
+  })
+  .then(response => response.json())
+  .then(data => {
+  console.log('Success:', data);
+  })
+  .catch((error) => {
+  console.log('Error:', error);
+  })
+  modal.style.display = "none";
+})

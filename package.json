@@ -4,8 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js",
+    "start": "parcel index.html --open",
     "build": "parcel build index.html && cp -R ./assets ./dist/assets"
   },
   "dependencies": {
