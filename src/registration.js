@@ -123,6 +123,11 @@ function nextTab() {
       showTab(currentTab);
     }
   }
+  else {
+    tabs[currentTab].style.display = "none";
+    currentTab = currentTab + 1;
+    showTab(currentTab);
+  }
 }
 
 function prevTab() {
