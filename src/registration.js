@@ -21,6 +21,22 @@ selectArray.forEach((item) => {
   })
 })
 
+//Other option functionality. 
+const genderGroup = document.querySelector("#Gender");
+const GenderOptions = genderGroup.querySelectorAll(".form-check-label");
+const otherOptionText = genderGroup.querySelector("#other-text-input");
+GenderOptions.forEach((item) => {
+  item.addEventListener("click", () => {
+    if(item.id == "other-label") {
+      otherOptionText.style.display = "inline";
+      otherOptionText.focus();
+    }
+    else {
+      otherOptionText.style.display = "none";
+    }
+  })
+})
+
 function resetSelectFields() {
   selectArray.forEach((item) => {
     item.style.color = 'rgba(255,255,255,0.5)';
@@ -72,9 +88,41 @@ function showTab(n) {
 
 function nextTab() {
   //validate input
-  tabs[currentTab].style.display = "none";
-  currentTab = currentTab + 1;
-  showTab(currentTab);
+  if(currentTab == 0) {
+    const passedNameTest = validateName();
+    const passedPhoneNumberTest = validatePhoneNumber();
+    const passedEmailTest = validateEmail();
+
+    const nameErrorMessage = document.getElementById('nameErrorMessage');
+    const emailErrorMessage = document.getElementById('emailErrorMessage');
+    const phoneNumberErrorMessage = document.getElementById('phoneNumberErrorMessage');
+    if(!passedNameTest) {
+      nameErrorMessage.style.display = "block";
+    }
+    else {
+      nameErrorMessage.style.display = "none";
+    }
+    if(!passedEmailTest) {
+      emailErrorMessage.style.display = "block";
+    }
+    else {
+      emailErrorMessage.style.display = "none";
+    }
+    if(!passedPhoneNumberTest) {
+      phoneNumberErrorMessage.style.display = "block";
+    }
+    else {
+      phoneNumberErrorMessage.style.display = "block";
+    }
+    if(passedNameTest && passedEmailTest && passedPhoneNumberTest) {
+      nameErrorMessage.style.display = "none";
+      emailErrorMessage.style.display = "none";
+      phoneNumberErrorMessage.style.display = "none";
+      tabs[currentTab].style.display = "none";
+      currentTab = currentTab + 1;
+      showTab(currentTab);
+    }
+  }
 }
 
 function prevTab() {
@@ -83,21 +131,30 @@ function prevTab() {
   showTab(currentTab);
 }
 
-//Other option functionality. 
-const genderGroup = document.querySelector("#Gender");
-const GenderOptions = genderGroup.querySelectorAll(".form-check-label");
-const otherOptionText = genderGroup.querySelector("#other-text-input");
-GenderOptions.forEach((item) => {
-  item.addEventListener("click", () => {
-    if(item.id == "other-label") {
-      otherOptionText.style.display = "inline";
-      otherOptionText.focus();
-    }
-    else {
-      otherOptionText.style.display = "none";
-    }
-  })
-})
+//Form validation
+//validate email field. 
+function validateEmail() {
+  const emailValue = document.getElementById('email').value;
+  console.log(emailValue);
+  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(emailValue).toLowerCase());
+}
+
+//validate Name field. 
+function validateName() {
+  const nameValue = document.getElementById('name').value;
+  if(nameValue == "") {
+    return false;
+  }
+  return true;
+}
+
+//validate Phone Number field. 
+function validatePhoneNumber() {
+  const phoneNumberValue = document.getElementById('phoneNumber').value;
+  const re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+  return re.test(String(phoneNumberValue));
+}
 
 //send post request to the server.
 registrationForm = document.getElementById('regForm');

@@ -298,6 +298,13 @@ img {
       letter-spacing: 1px;
       margin: 0
     }
+    .errorMessage {
+      padding-top: 5px;
+      order: 5;
+      font-size: 15px;
+      color: red;
+      display: none;
+    }
     .form-control:focus + .label, 
     .form-control:valid + .label{
       color: rgb(255,255,255);

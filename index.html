@@ -76,6 +76,7 @@
                 <div class="form-group mb-5">
                   <input type="text" class="form-control" id="name" autocomplete="off" name="name">
                   <label for="name" class="label">Name</label>
+                  <span class="errorMessage" id="nameErrorMessage">Please Enter Name</span>
                 </div>
                 <div class="form-group mb-5">
                   <input type="text" class="form-control" id="school" autocomplete="off" name="school">
@@ -84,10 +85,12 @@
                 <div class="form-group mb-5">
                   <input type="text" class="form-control" id="email" name="email">
                   <label for="email" class="label">Email</label>
+                  <span class="errorMessage" id="emailErrorMessage">Please enter valid email</span>
                 </div>
                 <div class="form-group">
                   <input type="text" class="form-control" id="phoneNumber" autocomplete="off" name="phoneNumber">
-                  <label for="phoneNumber" class="label">Phone Number</label>
+                  <label for="phoneNumber" class="label">Phone Number (XXX-XXX-XXXX)</label>
+                  <span class="errorMessage" id="phoneNumberErrorMessage">Please enter valid phone number</span>
                 </div>
               </div> 
               <div class="tab">
