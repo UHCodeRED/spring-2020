@@ -182,4 +182,7 @@ registrationForm.addEventListener('submit', function(e) {
   console.log('Error:', error);
   })
   modal.style.display = "none";
+  setTimeout( () => {
+    window.alert("Thank you for registration!");
+  }, 100)
 })
