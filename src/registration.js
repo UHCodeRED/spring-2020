@@ -123,6 +123,20 @@ function nextTab() {
       showTab(currentTab);
     }
   }
+  //checks if correct age is entered. 
+  else if(currentTab == 1) {
+    const passedAgeTest = validateAge();
+    const phoneNumberErrorMessage = document.getElementById('ageErrorMessage');
+    if(!passedAgeTest) {
+      ageErrorMessage.style.display = "block";
+    }
+    else {
+      ageErrorMessage.style.display = "none";
+      tabs[currentTab].style.display = "none";
+      currentTab = currentTab + 1;
+      showTab(currentTab);
+    }
+  }
   else {
     tabs[currentTab].style.display = "none";
     currentTab = currentTab + 1;
@@ -140,7 +154,6 @@ function prevTab() {
 //validate email field. 
 function validateEmail() {
   const emailValue = document.getElementById('email').value;
-  console.log(emailValue);
   const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(String(emailValue).toLowerCase());
 }
@@ -161,11 +174,17 @@ function validatePhoneNumber() {
   return re.test(String(phoneNumberValue));
 }
 
+function validateAge() {
+  const ageValue = document.getElementById('age').value;
+  const re = /^[1-9]?[0-9]{1}$|^100$/;
+  return re.test(String(ageValue));
+}
+
 //send post request to the server.
 registrationForm = document.getElementById('regForm');
-registrationForm.addEventListener('submit', function(e) {
+submitBtn.addEventListener("click", function(e) {
   e.preventDefault();
-  let formData = new FormData(e.target);
+  let formData = new FormData(registrationForm);
   fetch('https://radiant-tundra-50768.herokuapp.com/',{
     method: 'POST',
     body: formData,
