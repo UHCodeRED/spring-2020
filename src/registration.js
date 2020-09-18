@@ -43,6 +43,12 @@ function resetSelectFields() {
   })
 }
 
+//show resume name
+const resume = document.getElementById('resume')
+resume.addEventListener('change',(e)=> {
+  document.getElementById('resumeName').innerHTML = e.target.files[0].name;
+})
+
 //open modal
 function openModal() {
    modal.style.display = 'block';
@@ -54,11 +60,13 @@ function closeModal(e) {
     modal.style.display = 'none';
     document.getElementById("regForm").reset();
     resetSelectFields();
-    //resetTabs
+    //reset Tabs
     currentTab = 0;
     tabs.forEach((tab) => {
       tab.style.display = 'none';
     });
+    //reset Resume Selection
+    document.getElementById('resumeName').innerHTML = ""
   }
 }
 
@@ -201,7 +209,11 @@ submitBtn.addEventListener("click", function(e) {
   console.log('Error:', error);
   })
   modal.style.display = "none";
-  setTimeout( () => {
-    window.alert("Thank you for registration!");
-  }, 100)
+
+  document.getElementById("confirm").style.display = "block"
+
+  setTimeout(() => {
+    document.getElementById("confirm").style.display = "none"
+  }, 2900);
+
 })
