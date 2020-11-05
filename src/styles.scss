@@ -22,7 +22,7 @@ h3 {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.25rem;
-  
+
   .nls {
     margin-right: -0.25rem;
   }
@@ -32,7 +32,7 @@ img {
   object-fit: contain;
 }
 
-@media not screen and (-webkit-min-device-pixel-ratio:0) {
+@media not screen and (-webkit-min-device-pixel-ratio: 0) {
   .nls {
     margin-right: initial !important;
   }
@@ -203,12 +203,12 @@ img {
   }
 }
 
-#regModal{
+#regModal {
   background: rgba(255, 255, 255, 0.5);
   overflow-y: scroll;
   .modal-dialog {
     .modal-content {
-      background-color: rgb(0,0,0);
+      background-color: rgb(0, 0, 0);
       padding: 10px 10px 10px 10px;
       border: none;
       border-radius: 0;
@@ -229,7 +229,7 @@ img {
           font-size: 1.5rem;
         }
         .close-x:hover {
-          color: rgba(255,255,255,0.5);
+          color: rgba(255, 255, 255, 0.5);
           cursor: pointer;
         }
       }
@@ -237,23 +237,23 @@ img {
         .tab {
           display: none;
         }
-        .resumeName{
-          font-size: .85rem;
+        .resumeName {
+          font-size: 0.85rem;
         }
       }
       .modal-footer {
         border-top: none;
         padding-top: 0;
         .btn {
-          background: rgb(0,0,0);
-          border: 1px solid rgb(255, 255, 255,0.5);
+          background: rgb(0, 0, 0);
+          border: 1px solid rgb(255, 255, 255, 0.5);
           border-radius: 0;
           font-size: 16px;
-          color: rgb(255,255,255,0.5);
+          color: rgb(255, 255, 255, 0.5);
         }
         .btn:hover {
-          color: rgb(0,0,0);
-          background: rgb(255,255,255);
+          color: rgb(0, 0, 0);
+          background: rgb(255, 255, 255);
         }
         .btn:focus {
           box-shadow: none;
@@ -265,21 +265,21 @@ img {
     }
   }
 }
-#regForm{
-  .form-group{
+#regForm {
+  .form-group {
     display: flex;
     flex-direction: column;
     position: relative;
-    .form-control{
+    .form-control {
       // height: 50px;
       padding: 10px 0px 0px 0px;
       font-size: 18px;
-      background: rgb(0,0,0);
+      background: rgb(0, 0, 0);
       border: none;
-      border-bottom: 1px solid rgba(255,255,255,0.5);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
       border-radius: 0;
       transition: 0.3s ease-in-out;
-      color: rgba(255,255,255,1);
+      color: rgba(255, 255, 255, 1);
       width: 100%;
       font-weight: lighter;
       // padding: 0;
@@ -288,18 +288,18 @@ img {
     .form-control:focus {
       outline: none;
       box-shadow: none;
-      border-bottom: 1px solid rgb(255,255,255);
+      border-bottom: 1px solid rgb(255, 255, 255);
     }
     .label {
       position: absolute;
       top: -15px;
       order: 0;
-      color: rgba(255,255,255,0.5);
+      color: rgba(255, 255, 255, 0.5);
       text-transform: uppercase;
       transition: 0.3s ease;
       font-size: 15px;
       letter-spacing: 1px;
-      margin: 0
+      margin: 0;
     }
     .errorMessage {
       padding-top: 5px;
@@ -308,21 +308,21 @@ img {
       color: red;
       display: none;
     }
-    .form-control:focus + .label, 
-    .form-control:valid + .label{
-      color: rgb(255,255,255);
+    .form-control:focus + .label,
+    .form-control:valid + .label {
+      color: rgb(255, 255, 255);
     }
-    .form-control:not(:focus) + .label{
-      color: rgba(255,255,255,0.5);
+    .form-control:not(:focus) + .label {
+      color: rgba(255, 255, 255, 0.5);
     }
-    .form-control.select{
-      color: rgba(255,255,255,0.5);
+    .form-control.select {
+      color: rgba(255, 255, 255, 0.5);
     }
-    .form-control.select .default{
-      color: rgb(255,255,255);
+    .form-control.select .default {
+      color: rgb(255, 255, 255);
     }
-    .form-control.select .valid-answer{
-      color: rgb(255,255,255);
+    .form-control.select .valid-answer {
+      color: rgb(255, 255, 255);
       font-weight: lighter;
     }
     .question {
@@ -336,28 +336,28 @@ img {
         opacity: 0;
       }
       .form-check-label {
-        color: rgba(255,255,255,0.5);
+        color: rgba(255, 255, 255, 0.5);
         font-size: 15px;
         text-transform: uppercase;
         letter-spacing: 1px;
       }
       .form-check-label:hover {
         cursor: pointer;
-        color: rgb(255,255,255);
+        color: rgb(255, 255, 255);
       }
       .form-check-input:checked + .form-check-label {
-        color: rgb(255,255,255);
+        color: rgb(255, 255, 255);
       }
       .form-check-other-text {
         display: none;
         border: 0;
-        border-bottom: 1px solid rgb(255,255,255);
-        background: rgb(0,0,0);
-        color: rgb(255,255,255);
+        border-bottom: 1px solid rgb(255, 255, 255);
+        background: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
         font-weight: lighter;
         font-size: 15px;
       }
-      .form-check-other-text:focus{
+      .form-check-other-text:focus {
         box-shadow: none;
         outline: none;
       }
@@ -369,13 +369,13 @@ img {
       font-size: 10px;
       padding: 3px 6px;
       cursor: pointer;
-      border: 1px solid rgba(255,255,255,0.5);
-      color: rgba(255,255,255,0.5);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      color: rgba(255, 255, 255, 0.5);
       font-weight: lighter;
     }
-    .upload-file:hover{
-      color: rgb(0,0,0);
-      background: rgb(255,255,255);
+    .upload-file:hover {
+      color: rgb(0, 0, 0);
+      background: rgb(255, 255, 255);
     }
   }
 }
@@ -384,7 +384,7 @@ img {
   display: none;
   background-color: #000000;
   color: #ffffff;
-  border: 1px solid rgba(255,255,255,0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   position: absolute;
   width: 300px;
   height: 70px;
@@ -397,14 +397,14 @@ img {
   animation: fadeOut 2s;
   animation-delay: 2s;
 
- @keyframes fadeOut {
-   from{
+  @keyframes fadeOut {
+    from {
       opacity: 1;
-   }
-   to{
+    }
+    to {
       opacity: 0;
-   }
- }
+    }
+  }
 }
 
 #landing {
@@ -520,7 +520,6 @@ footer {
   }
 }
 
-
 //collapse
 .collapsible {
   background-color: rgb(0, 0, 0);
@@ -529,19 +528,19 @@ footer {
   padding: 10px;
   margin-bottom: 10px;
   width: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.5);;
+  border: 1px solid rgba(255, 255, 255, 0.5);
   text-align: left;
   outline: none;
   font-size: 16px;
-  
 }
 
-.active, .collapsible:hover {
+.active,
+.collapsible:hover {
   background-color: rgb(31, 30, 30);
 }
 
 .collapsible:after {
-  content: '\002B';
+  content: "\002B";
   color: white;
   font-weight: bold;
   float: right;
@@ -550,7 +549,6 @@ footer {
 
 .active:after {
   content: "\2212";
-  
 }
 
 .content {
@@ -562,10 +560,25 @@ footer {
   font-size: 16px;
 }
 
-.questionTitle{
+.questionTitle {
   font-size: 25px;
 }
 
-.answer{
+.answer {
   font-size: 18px;
+}
+
+.team-image {
+  width: 180px;
+  height: auto;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-member-title {
+  font-size: 15px;
 }
