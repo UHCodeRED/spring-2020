@@ -9,7 +9,7 @@ import {
   Color,
   ShaderMaterial,
   MeshPhongMaterial,
-  PlaneBufferGeometry
+  PlaneBufferGeometry,
 } from "three";
 
 import seed from "seed-random";
@@ -68,7 +68,7 @@ function getOptions() {
     segments,
     wireframe_color: "#888",
     perlin_passes: perlinPasses,
-    wireframe: true
+    wireframe: true,
   };
 
   if (getNetAltitude(options) < 1) {
@@ -108,14 +108,14 @@ class App {
     this.isInView = false;
     this.observer = new IntersectionObserver(
       (entries, observer) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
           this.isInView = entry.intersectionRatio > observer.thresholds[0];
         });
       },
       {
         root: null,
         rootMargin: "20px 0px",
-        threshold: 0
+        threshold: 0,
       }
     );
 
@@ -145,7 +145,7 @@ class App {
       width: window.innerWidth,
       height: window.innerHeight,
       scale: 1,
-      antialias: false
+      antialias: false,
     });
 
     this.renderer.setSize(window.innerWidth, this.height);
@@ -220,48 +220,48 @@ class Terrain {
     this.uniforms = {
       time: {
         type: "f",
-        value: 0.0
+        value: 0.0,
       },
 
       speed: {
         type: "f",
-        value: this.options.speed
+        value: this.options.speed,
       },
 
       elevation: {
         type: "f",
-        value: this.options.elevation
+        value: this.options.elevation,
       },
 
       noise_range: {
         type: "f",
-        value: this.options.noise_range
+        value: this.options.noise_range,
       },
 
       offset: {
         type: "f",
-        value: this.options.elevation
+        value: this.options.elevation,
       },
 
       perlin_passes: {
         type: "f",
-        value: this.options.perlin_passes
+        value: this.options.perlin_passes,
       },
 
       sombrero_amplitude: {
         type: "f",
-        value: this.options.sombrero_amplitude
+        value: this.options.sombrero_amplitude,
       },
 
       sombrero_frequency: {
         type: "f",
-        value: this.options.sombrero_frequency
+        value: this.options.sombrero_frequency,
       },
 
       line_color: {
         type: "c",
-        value: new Color(this.options.wireframe_color)
-      }
+        value: new Color(this.options.wireframe_color),
+      },
     };
 
     this.buildPlanes(this.options.segments);
@@ -286,13 +286,13 @@ class Terrain {
       wireframe: true,
       wireframeLinewidth: 1,
       transparent: true,
-      uniforms: this.uniforms
+      uniforms: this.uniforms,
     });
 
     this.groundMaterial = new MeshPhongMaterial({
       // ambient: 0xffffff,
       color: 0xffffff,
-      specular: 0x050505
+      specular: 0x050505,
     });
 
     this.groundMaterial.visible = false;
@@ -329,37 +329,46 @@ new App(footerBackground, 320).init();
 // Vanilla JavaScript Scroll to Anchor
 // @ https://perishablepress.com/vanilla-javascript-scroll-anchor/
 
-(function() {
-	scrollTo();
+(function () {
+  scrollTo();
 })();
 
 function scrollTo() {
-	var links = document.getElementsByTagName('a');
-	for (var i = 0; i < links.length; i++) {
-		var link = links[i];
-		if ((link.href && link.href.indexOf('#') != -1) && ((link.pathname == location.pathname) || ('/' + link.pathname == location.pathname)) && (link.search == location.search)) {
-			link.onclick = scrollAnchors;
-		}
-	}
+  var links = document.getElementsByTagName("a");
+  for (var i = 0; i < links.length; i++) {
+    var link = links[i];
+    if (
+      link.href &&
+      link.href.indexOf("#") != -1 &&
+      (link.pathname == location.pathname ||
+        "/" + link.pathname == location.pathname) &&
+      link.search == location.search
+    ) {
+      link.onclick = scrollAnchors;
+    }
+  }
 }
 
 function scrollAnchors(e, respond = null) {
-	const distanceToTop = el => Math.floor(el.getBoundingClientRect().top);
-	e.preventDefault();
-	var targetID = (respond) ? respond.getAttribute('href') : this.getAttribute('href');
-	const targetAnchor = document.querySelector(targetID);
-	if (!targetAnchor) return;
-	const originalTop = distanceToTop(targetAnchor);
-	window.scrollBy({ top: originalTop, left: 0, behavior: 'smooth' });
-	const checkIfDone = setInterval(function() {
-		const atBottom = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2;
-		if (distanceToTop(targetAnchor) === 0 || atBottom) {
-			targetAnchor.tabIndex = '-1';
-			targetAnchor.focus();
-			window.history.pushState('', '', targetID);
-			clearInterval(checkIfDone);
-		}
-	}, 100);
+  const distanceToTop = (el) => Math.floor(el.getBoundingClientRect().top);
+  e.preventDefault();
+  var targetID = respond
+    ? respond.getAttribute("href")
+    : this.getAttribute("href");
+  const targetAnchor = document.querySelector(targetID);
+  if (!targetAnchor) return;
+  const originalTop = distanceToTop(targetAnchor);
+  window.scrollBy({ top: originalTop, left: 0, behavior: "smooth" });
+  const checkIfDone = setInterval(function () {
+    const atBottom =
+      window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2;
+    if (distanceToTop(targetAnchor) === 0 || atBottom) {
+      targetAnchor.tabIndex = "-1";
+      targetAnchor.focus();
+      window.history.pushState("", "", targetID);
+      clearInterval(checkIfDone);
+    }
+  }, 100);
 }
 
 // collapse
@@ -367,13 +376,13 @@ var coll = document.getElementsByClassName("collapsible");
 var i;
 
 for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
+  coll[i].addEventListener("click", function () {
     this.classList.toggle("active");
     var content = this.nextElementSibling;
-    if (content.style.maxHeight){
+    if (content.style.maxHeight) {
       content.style.maxHeight = null;
     } else {
       content.style.maxHeight = content.scrollHeight + "px";
-    } 
+    }
   });
 }
