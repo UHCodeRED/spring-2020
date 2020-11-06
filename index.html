@@ -7,8 +7,8 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <link rel="stylesheet" href="src/scss/bootstrap.scss"/>
-    <link rel="stylesheet" type="text/css" href="src/styles.scss"/>
+    <link rel="stylesheet" href="src/scss/bootstrap.scss" />
+    <link rel="stylesheet" type="text/css" href="src/styles.scss" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Roboto:300,500,600"
@@ -30,9 +30,7 @@
             alt="CodeRED Voyage Logo"
           />
           <div class="info-line py-1">
-            <div class="float-left event-year decode-in p-0">
-              2020
-            </div>
+            <div class="float-left event-year decode-in p-0">2020</div>
             <div class="float-right column event-location decode-in p-0">
               USA.TX.Houston
             </div>
@@ -42,7 +40,7 @@
             <strong>
               <span class="nls">Get Ready<br />Nov 7th - 8th 2020</span>
               <!-- <span class="nls">Coming Soon<br />Nov 7th - 8th 2020</span> -->
-              </strong>
+            </strong>
           </div>
           <!-- <a
             href="https://docs.google.com/forms/d/e/1FAIpQLScjYF1lIBgFSICLn108IOcLI2lPBxgRehzwCo_QG1_VmrQVCA/viewform"
@@ -51,7 +49,10 @@
             ><span class="nls">Volunteer</span></a
           > -->
 
-          <a href="https://uhcode.red/assets/CodeRed_Voyage_Info.pdf" class="arrow-btn w-100 mt-2 mb-2" target="_blank"
+          <a
+            href="https://uhcode.red/assets/CodeRed_Voyage_Info.pdf"
+            class="arrow-btn w-100 mt-2 mb-2"
+            target="_blank"
             ><span class="nls">Schedule</span></a
           >
 
@@ -59,7 +60,11 @@
             ><span class="nls">Sponsors</span></a
           >
 
-          <button type="button" class="arrow-btn w-100 nls mb-2" id="registerBtn" >
+          <button
+            type="button"
+            class="arrow-btn w-100 nls mb-2"
+            id="registerBtn"
+          >
             Register
           </button>
         </div>
@@ -74,99 +79,248 @@
         <div class="modal-content">
           <form id="regForm" autocomplete="off">
             <div class="modal-header">
-              <h5 class="modal-title">CodeRED Registration <br>
-                <span class="modal-sub-title">N/A where applicable</span> 
+              <h5 class="modal-title">
+                CodeRED Registration <br />
+                <span class="modal-sub-title">N/A where applicable</span>
               </h5>
               <span class="close-x" id="regCloseBtn">&times;</span>
             </div>
             <div class="modal-body">
               <div class="tab">
                 <div class="form-group mb-5">
-                  <input type="text" class="form-control" id="name" autocomplete="off" name="name">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    autocomplete="off"
+                    name="name"
+                  />
                   <label for="name" class="label">Name</label>
-                  <span class="errorMessage" id="nameErrorMessage">Please Enter Name</span>
+                  <span class="errorMessage" id="nameErrorMessage"
+                    >Please Enter Name</span
+                  >
                 </div>
                 <div class="form-group mb-5">
-                  <input type="text" class="form-control" id="school" autocomplete="off" name="school">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="school"
+                    autocomplete="off"
+                    name="school"
+                  />
                   <label for="school" class="label">School</label>
                 </div>
                 <div class="form-group mb-5">
-                  <input type="text" class="form-control" id="email" name="email">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                  />
                   <label for="email" class="label">Email</label>
-                  <span class="errorMessage" id="emailErrorMessage">Please enter valid email</span>
+                  <span class="errorMessage" id="emailErrorMessage"
+                    >Please enter valid email</span
+                  >
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" id="phoneNumber" autocomplete="off" name="phoneNumber">
-                  <label for="phoneNumber" class="label">Phone Number (XXX-XXX-XXXX)</label>
-                  <span class="errorMessage" id="phoneNumberErrorMessage">Please enter valid phone number</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="phoneNumber"
+                    autocomplete="off"
+                    name="phoneNumber"
+                  />
+                  <label for="phoneNumber" class="label"
+                    >Phone Number (XXX-XXX-XXXX)</label
+                  >
+                  <span class="errorMessage" id="phoneNumberErrorMessage"
+                    >Please enter valid phone number</span
+                  >
                 </div>
-              </div> 
+              </div>
               <div class="tab">
-                <div class="form-group mb-5" style="display: none;">
-                  <input type="text" class="form-control" id="addressLine1" autocomplete="off" name="addressLine1" placeholder="Only if in US, to send swag!">
-                  <label for="addressLine1" class="label">Address Line 1 (street address)</label>
+                <div class="form-group mb-5" style="display: none">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="addressLine1"
+                    autocomplete="off"
+                    name="addressLine1"
+                    placeholder="Only if in US, to send swag!"
+                  />
+                  <label for="addressLine1" class="label"
+                    >Address Line 1 (street address)</label
+                  >
                 </div>
-                <div class="form-group mb-5" style="display: none;">
-                  <input type="text" class="form-control" id="addressLine2" autocomplete="off" name="addressLine2">
-                  <label for="addressLine2" class="label">Address Line 2 (City, State, ZIP)</label>
+                <div class="form-group mb-5" style="display: none">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="addressLine2"
+                    autocomplete="off"
+                    name="addressLine2"
+                  />
+                  <label for="addressLine2" class="label"
+                    >Address Line 2 (City, State, ZIP)</label
+                  >
                 </div>
                 <div class="form-group mb-5">
-                  <input type="text" class="form-control" id="age" autocomplete="off" name="age">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="age"
+                    autocomplete="off"
+                    name="age"
+                  />
                   <label for="age" class="label">Age</label>
-                  <span class="errorMessage" id="ageErrorMessage">Please enter valid age</span>
+                  <span class="errorMessage" id="ageErrorMessage"
+                    >Please enter valid age</span
+                  >
                 </div>
                 <div class="form-group" id="Gender">
                   <p class="question">Gender</p>
                   <div class="form-check">
-                    <input type="radio" class="form-check-input" id="male" name="gender" value="male">
-                    <label class="form-check-label" for="male" id="male-label">Male</label>
+                    <input
+                      type="radio"
+                      class="form-check-input"
+                      id="male"
+                      name="gender"
+                      value="male"
+                    />
+                    <label class="form-check-label" for="male" id="male-label"
+                      >Male</label
+                    >
                   </div>
                   <div class="form-check">
-                    <input type="radio" class="form-check-input" id="female" name="gender" value="female">
-                    <label class="form-check-label" for="female" id="female-label">Female</label>
+                    <input
+                      type="radio"
+                      class="form-check-input"
+                      id="female"
+                      name="gender"
+                      value="female"
+                    />
+                    <label
+                      class="form-check-label"
+                      for="female"
+                      id="female-label"
+                      >Female</label
+                    >
                   </div>
                   <div class="form-check">
-                    <input type="radio" class="form-check-input" id="preferNotToSay" name="gender" value="N/A">
-                    <label class="form-check-label" for="preferNotToSay" id="preferNotToSay-label">Prefer Not to Say</label>
+                    <input
+                      type="radio"
+                      class="form-check-input"
+                      id="preferNotToSay"
+                      name="gender"
+                      value="N/A"
+                    />
+                    <label
+                      class="form-check-label"
+                      for="preferNotToSay"
+                      id="preferNotToSay-label"
+                      >Prefer Not to Say</label
+                    >
                   </div>
                   <div class="form-check form-check-other">
-                    <input type="radio" class="form-check-input" id="other" name="gender" value="other">
-                    <label class="form-check-label" for="other" id="other-label">Other</label>
-                    <input type="text" class="form-check-other-text" name="Othergender" id="other-text-input" placeholder="Enter Here">
+                    <input
+                      type="radio"
+                      class="form-check-input"
+                      id="other"
+                      name="gender"
+                      value="other"
+                    />
+                    <label class="form-check-label" for="other" id="other-label"
+                      >Other</label
+                    >
+                    <input
+                      type="text"
+                      class="form-check-other-text"
+                      name="Othergender"
+                      id="other-text-input"
+                      placeholder="Enter Here"
+                    />
                   </div>
                 </div>
               </div>
               <div class="tab">
                 <div class="form-group mb-5">
-                  <select class="form-control select" id="raceEthnicity" name="raceEthnicity">
-                    <option selected disabled class="default">Select One</option>
-                    <option class="valid-answer" value="AmericanIndian">American Indian or Alaskan Native</option>
+                  <select
+                    class="form-control select"
+                    id="raceEthnicity"
+                    name="raceEthnicity"
+                  >
+                    <option selected disabled class="default">
+                      Select One
+                    </option>
+                    <option class="valid-answer" value="AmericanIndian">
+                      American Indian or Alaskan Native
+                    </option>
                     <option class="valid-answer" value="Asian">Asian</option>
-                    <option class="valid-answer" value="Black">Black or African American</option>
-                    <option class="valid-answer" value="Hispanic">Hispanic</option>
-                    <option class="valid-answer" value="HawaiianPacific">Native Hawaiian / Other Pacific Islander</option>
-                    <option class="valid-answer" value="White">White / Caucasian</option>
-                    <option class="valid-answer" value="Multitple">Multiple ethnicity</option>
-                    <option class="valid-answer" value="NoAnswer">Prefer not to answer</option>
+                    <option class="valid-answer" value="Black">
+                      Black or African American
+                    </option>
+                    <option class="valid-answer" value="Hispanic">
+                      Hispanic
+                    </option>
+                    <option class="valid-answer" value="HawaiianPacific">
+                      Native Hawaiian / Other Pacific Islander
+                    </option>
+                    <option class="valid-answer" value="White">
+                      White / Caucasian
+                    </option>
+                    <option class="valid-answer" value="Multitple">
+                      Multiple ethnicity
+                    </option>
+                    <option class="valid-answer" value="NoAnswer">
+                      Prefer not to answer
+                    </option>
                   </select>
-                  <label for="raceEthnicity" class="label">Race Ethinicity</label>
+                  <label for="raceEthnicity" class="label"
+                    >Race Ethinicity</label
+                  >
                 </div>
                 <div class="form-group mb-5">
-                  <select class="form-control select" id="education-level" name="educationLevel">
-                    <option selected disabled class="default">Select One</option>
-                    <option class="valid-answer" value="HighSchool">High School</option>
-                    <option class="valid-answer" value="Undergrad">Undergrad</option>
-                    <option class="valid-answer" value="Masters">Masters</option>
+                  <select
+                    class="form-control select"
+                    id="education-level"
+                    name="educationLevel"
+                  >
+                    <option selected disabled class="default">
+                      Select One
+                    </option>
+                    <option class="valid-answer" value="HighSchool">
+                      High School
+                    </option>
+                    <option class="valid-answer" value="Undergrad">
+                      Undergrad
+                    </option>
+                    <option class="valid-answer" value="Masters">
+                      Masters
+                    </option>
                     <option class="valid-answer" value="Ph.D">Ph.D</option>
-                    <option class="valid-answer" value="NotInSchool">Not in School</option>
+                    <option class="valid-answer" value="NotInSchool">
+                      Not in School
+                    </option>
                   </select>
-                  <label for="educaction-level" class="label">Education Level</label>
+                  <label for="educaction-level" class="label"
+                    >Education Level</label
+                  >
                 </div>
                 <div class="form-group mb-5">
-                  <select class="form-control select" id="grade-level" name="gradeLevel">
-                    <option selected disabled class="default">Select One</option>
-                    <option class="valid-answer" value="Freshman">Freshman</option>
-                    <option class="valid-answer" value="Sophmore">Sophmore</option>
+                  <select
+                    class="form-control select"
+                    id="grade-level"
+                    name="gradeLevel"
+                  >
+                    <option selected disabled class="default">
+                      Select One
+                    </option>
+                    <option class="valid-answer" value="Freshman">
+                      Freshman
+                    </option>
+                    <option class="valid-answer" value="Sophmore">
+                      Sophmore
+                    </option>
                     <option class="valid-answer" value="Junior">Junior</option>
                     <option class="valid-answer" value="Senior">Senior</option>
                     <option class="valid-answer" value="N/A">N/A</option>
@@ -174,11 +328,21 @@
                   <label for="grade-level" class="label">Grade Level</label>
                 </div>
                 <div class="form-group">
-                  <select class="form-control select" id="exp-level" name="codingLevel">
-                    <option selected disabled class="default">Select One</option>
-                    <option class="valid-answer" value="Beginner">Beginner</option>
+                  <select
+                    class="form-control select"
+                    id="exp-level"
+                    name="codingLevel"
+                  >
+                    <option selected disabled class="default">
+                      Select One
+                    </option>
+                    <option class="valid-answer" value="Beginner">
+                      Beginner
+                    </option>
                     <option class="valid-answer" value="Novice">Novice</option>
-                    <option class="valid-answer" value="Advanced">Advanced</option>
+                    <option class="valid-answer" value="Advanced">
+                      Advanced
+                    </option>
                     <option class="valid-answer" value="Expert">Expert</option>
                   </select>
                   <label for="exp-level" class="label">Coding Level</label>
@@ -188,53 +352,131 @@
                 <div class="form-group mb-5">
                   <p class="question">What Topics Will you work on?</p>
                   <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="mobile" name="mobile">
-                    <label class="form-check-label" for="mobile" id="mobile-label">Mobile (IOS/Android)</label>
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="mobile"
+                      name="mobile"
+                    />
+                    <label
+                      class="form-check-label"
+                      for="mobile"
+                      id="mobile-label"
+                      >Mobile (IOS/Android)</label
+                    >
                   </div>
                   <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="desktop" name="desktop">
-                    <label class="form-check-label" for="desktop">Desktop (Python, C#, etc.)</label>
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="desktop"
+                      name="desktop"
+                    />
+                    <label class="form-check-label" for="desktop"
+                      >Desktop (Python, C#, etc.)</label
+                    >
                   </div>
                   <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="frontend_design" name="frontend">
-                    <label class="form-check-label" for="frontend_design">Frontend Design (HTML+JS+CSS)</label>
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="frontend_design"
+                      name="frontend"
+                    />
+                    <label class="form-check-label" for="frontend_design"
+                      >Frontend Design (HTML+JS+CSS)</label
+                    >
                   </div>
                   <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="backend" name="backend">
-                    <label class="form-check-label" for="backend">Backend Design (Python, SQL, etc)</label>
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="backend"
+                      name="backend"
+                    />
+                    <label class="form-check-label" for="backend"
+                      >Backend Design (Python, SQL, etc)</label
+                    >
                   </div>
                   <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="hardware" name="hardware">
-                    <label class="form-check-label" for="hardware">Hardware (Arduino, Breadboarding, etc.)</label>
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="hardware"
+                      name="hardware"
+                    />
+                    <label class="form-check-label" for="hardware"
+                      >Hardware (Arduino, Breadboarding, etc.)</label
+                    >
                   </div>
                   <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="game_dev" name="gameDev">
-                    <label class="form-check-label" for="game_dev">Game Development (Unity, Unreal, etc.)</label>
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="game_dev"
+                      name="gameDev"
+                    />
+                    <label class="form-check-label" for="game_dev"
+                      >Game Development (Unity, Unreal, etc.)</label
+                    >
                   </div>
                   <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="cyber" name="cyber">
-                    <label class="form-check-label" for="cyber">Cyber Security (Netwrok Dev)</label>
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="cyber"
+                      name="cyber"
+                    />
+                    <label class="form-check-label" for="cyber"
+                      >Cyber Security (Netwrok Dev)</label
+                    >
                   </div>
                   <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="undecided" name="undecided">
-                    <label class="form-check-label" for="undecided">I don't know bruh!/</label>
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="undecided"
+                      name="undecided"
+                    />
+                    <label class="form-check-label" for="undecided"
+                      >I don't know bruh!/</label
+                    >
                   </div>
                 </div>
               </div>
               <div class="tab">
                 <div class="form-group mb-5">
-                  <input type="text" class="form-control" id="twitter" autocomplete="off" name="twitter">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="twitter"
+                    autocomplete="off"
+                    name="twitter"
+                  />
                   <label for="twitter" class="label">Twitter</label>
                 </div>
                 <div class="form-group mb-5">
-                  <input type="text" class="form-control" id="github" autocomplete="off" name="github">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="github"
+                    autocomplete="off"
+                    name="github"
+                  />
                   <label for="github" class="label">Github</label>
                 </div>
                 <div class="form-group">
                   <label class="label">Resume</label>
                   <div class="random">
-                    <label for="resume" class="upload-file" id="uploadFile">Select a file</label>
-                    <input type="file" id="resume" autocomplete="off" name="resume">
+                    <label for="resume" class="upload-file" id="uploadFile"
+                      >Select a file</label
+                    >
+                    <input
+                      type="file"
+                      id="resume"
+                      autocomplete="off"
+                      name="resume"
+                    />
                     <div class="resumeName" id="resumeName"></div>
                   </div>
                 </div>
@@ -251,7 +493,8 @@
     </div>
 
     <div id="confirm">
-        <div class="message">Your application has been submitted!</div><br>
+      <div class="message">Your application has been submitted!</div>
+      <br />
     </div>
 
     <div id="about" class="container">
@@ -271,21 +514,26 @@
             <span class="text-primary">CodeRED:</span> Houston's Premier<br />Innovation
             Experience</span
           >
-          </h2>
-    
+        </h2>
 
-        <div class="mt-4 d-inline-flex questionTitle"><strong>What is CodeRED?</strong></div>
+        <div class="mt-4 d-inline-flex questionTitle">
+          <strong>What is CodeRED?</strong>
+        </div>
         <div class="answer">
           <p>
-            CodeRED is a <strong>virtual innovative event</strong>  lasting for <strong>24 hours</strong> , in which participants work in a <strong>team of up to 4 people</strong> to build solutions to real-life problems. 
+            CodeRED is a <strong>virtual innovative event</strong> lasting for
+            <strong>24 hours</strong> , in which participants work in a
+            <strong>team of up to 4 people</strong> to build solutions to
+            real-life problems.
           </p>
           <p>
-            Whether you are building your first website, diving into the world of
-            virtual reality, or building something truly game changing in an
-            industry, come join us at CodeRED Voyage  to have fun, learn something 
-            new, explore possibilities, solve problems, and build out your dreams without fear or doubt.
+            Whether you are building your first website, diving into the world
+            of virtual reality, or building something truly game changing in an
+            industry, come join us at CodeRED Voyage to have fun, learn
+            something new, explore possibilities, solve problems, and build out
+            your dreams without fear or doubt.
           </p>
-          <br/>
+          <br />
           <!-- <div class="center-content" id="eventInfo">
             <div class="justify-content-center">
               <h3>Event Schedule will be released soon!</h3>
@@ -294,53 +542,72 @@
           <br/> -->
         </div>
 
-        
         <!-- collapse -->
-        <div class="questionTitle"><strong>Frequently Asked Questions</strong></div>
-        <div class="collapsible">Who can attend CodeRED?</div> 
-        <div class="content">
-          <p>Any undergraduate or graduate student from any school. Recent UH graduates are welcomed as well.</p>
+        <div class="questionTitle">
+          <strong>Frequently Asked Questions</strong>
         </div>
-        <div class="collapsible">What is the deadline to register?</div> 
+        <div class="collapsible">Who can attend CodeRED?</div>
+        <div class="content">
+          <p>
+            Any undergraduate or graduate student from any school. Recent UH
+            graduates are welcomed as well.
+          </p>
+        </div>
+        <div class="collapsible">What is the deadline to register?</div>
         <div class="content">
           <p>Registrations would close on <strong>November 4, 2020</strong>.</p>
         </div>
         <div class="collapsible">What if I am not experienced?</div>
         <div class="content">
-          <p>CodeRED is designed to be beginner friendly. We will be having plenty of resources, workshops and mentors to guide you in the right direction.</p>
+          <p>
+            CodeRED is designed to be beginner friendly. We will be having
+            plenty of resources, workshops and mentors to guide you in the right
+            direction.
+          </p>
         </div>
-        <div class="collapsible">How much does it cost?</div> 
+        <div class="collapsible">How much does it cost?</div>
         <div class="content">
-          <p>This event is <strong>completely free</strong> for all participants.</p>
+          <p>
+            This event is <strong>completely free</strong> for all participants.
+          </p>
         </div>
         <div class="collapsible">What if I don’t have a team?</div>
         <div class="content">
-          <p>Don't worry! That's pretty common, you'll have some time at the beginning of the event to team up with other participants who are looking for a team as well. We highly recommend that you team up with someone and make new friends. However, you don’t have to be in a team to compete.</p>
+          <p>
+            Don't worry! That's pretty common, you'll have some time at the
+            beginning of the event to team up with other participants who are
+            looking for a team as well. We highly recommend that you team up
+            with someone and make new friends. However, you don’t have to be in
+            a team to compete.
+          </p>
         </div>
-        <div class="collapsible">Would there be swag?</div> 
+        <div class="collapsible">Would there be swag?</div>
         <div class="content">
-          <p>Unfortunately, we would not be able to give out swag this year. But we still got some great prizes!</p>
+          <p>
+            Unfortunately, we would not be able to give out swag this year. But
+            we still got some great prizes!
+          </p>
         </div>
         <div class="collapsible">What if I have more questions?</div>
         <div class="content">
-          <p>Please email us at <strong>hackathon@cougarcs.com</strong>. We will be happy to answer any of your questions :)</p>
+          <p>
+            Please email us at <strong>hackathon@cougarcs.com</strong>. We will
+            be happy to answer any of your questions :)
+          </p>
         </div>
       </div>
     </div>
-
 
     <div id="sponsors" class="container">
       <div class="row text-center">
         <h2 class="pt-4 pb-0"><span class="nls">Sponsors</span></h2>
         <h3 class="mb-4">
           <span class="nls">
-            <span class="text-primary">Thank you</span> 
+            <span class="text-primary">Thank you</span>
             to our great
-            <span class="text-primary"
-              >Sponsors</span
-          >
+            <span class="text-primary">Sponsors</span>
+          </span>
         </h3>
-        
 
         <div class="w-100 text-center mt-3 mb-3">
           <img
@@ -359,13 +626,16 @@
         </div>
 
         <div class="w-100 col text-center mt-3 mb-3">
-          <a href="https://www.oreilly.com/pub/cpc/239130" rel="external" target="_blank"><img
-            src="/assets/partners/OReilly_logo_rgb.svg"
-            loading="lazy"
-            width="300"
-          />
+          <a
+            href="https://www.oreilly.com/pub/cpc/239130"
+            rel="external"
+            target="_blank"
+            ><img
+              src="/assets/partners/OReilly_logo_rgb.svg"
+              loading="lazy"
+              width="300"
+          /></a>
         </div>
-
       </div>
     </div>
 
@@ -375,78 +645,81 @@
       </h2>
       <div class="row mt-4">
         <div class="col-sm team-member">
-          <img src="assets/images/team10.jpg" class="img-fluid team-image"/>
+          <img src="assets/images/team10.jpg" class="img-fluid team-image" />
           <p class="mt-2 mb-0 person-name">Mariana Villalobos</p>
           <p class="team-member-title">Vice President</p>
         </div>
         <div class="col-sm team-member">
-          <img src="assets/images/team01.jpg" class="img-fluid team-image"/>
+          <img src="assets/images/team01.jpg" class="img-fluid team-image" />
           <p class="mt-2 mb-0 person-name">Shubha Joshi</p>
           <p class="team-member-title">Communications Director</p>
         </div>
         <div class="col-sm team-member">
-          <img src="assets/images/team02.jpg" class="img-fluid team-image"/>
+          <img src="assets/images/team02.jpg" class="img-fluid team-image" />
           <p class="mt-2 mb-0 person-name">Sahil Thakkar</p>
           <p class="team-member-title">Operations Director</p>
         </div>
         <div class="col-sm team-member">
-          <img src="assets/images/image-placeholder.jpg" class="img-fluid team-image"/>
+          <img
+            src="assets/images/image-placeholder.jpg"
+            class="img-fluid team-image"
+          />
           <p class="mt-2 mb-0 person-name">Carlos Flores</p>
           <p class="team-member-title">Sponsorship Director</p>
         </div>
       </div>
       <div class="row">
         <div class="col-sm team-member">
-          <img src="assets/images/team04.jpg" class="img-fluid team-image"/>
+          <img src="assets/images/team04.jpg" class="img-fluid team-image" />
           <p class="mt-2 mb-0 person-name">Loveleen Thomas</p>
           <p class="team-member-title">HR Director</p>
         </div>
         <div class="col-sm team-member">
-          <img src="assets/images/team09.jpg" class="img-fluid team-image"/>
+          <img src="assets/images/team09.jpg" class="img-fluid team-image" />
           <p class="mt-2 mb-0 person-name">Gerardo Lopez</p>
           <p class="team-member-title">Communications Director</p>
         </div>
         <div class="col-sm team-member">
-          <img src="assets/images/team05.jpg" class="img-fluid team-image"/>
+          <img src="assets/images/team05.jpg" class="img-fluid team-image" />
           <p class="mt-2 mb-0 person-name">Jacquez Green</p>
           <p class="team-member-title">Operations Member</p>
         </div>
         <div class="col-sm team-member">
-          <img src="assets/images/team06.jpg" class="img-fluid team-image"/>
+          <img src="assets/images/team06.jpg" class="img-fluid team-image" />
           <p class="mt-2 mb-0 person-name">Giselle Ruiz</p>
           <p class="team-member-title">Communications Member</p>
         </div>
-        
       </div>
       <div class="row">
         <div class="col-sm team-member">
-          <img src="assets/images/team07.jpg" class="img-fluid team-image"/>
+          <img src="assets/images/team07.jpg" class="img-fluid team-image" />
           <p class="mt-2 mb-0 person-name">Muhammad Usman</p>
           <p class="team-member-title">Sales Director</p>
         </div>
         <div class="col-sm team-member">
-          <img src="assets/images/team08.jpg" class="img-fluid team-image"/>
+          <img src="assets/images/team08.jpg" class="img-fluid team-image" />
           <p class="mt-2 mb-0 person-name">Tommy Nguyen</p>
           <p class="team-member-title">Communications Member</p>
         </div>
         <div class="col-sm team-member">
-          <img src="assets/images/team03.jpg" class="img-fluid team-image"/>
+          <img src="assets/images/team03.jpg" class="img-fluid team-image" />
           <p class="mt-2 mb-0 person-name">Sai Patibandla</p>
           <p class="team-member-title">Operations Director</p>
         </div>
-<<<<<<< HEAD
         <div class="col team-member">
-          <img src="assets/images/team11.jpg" class="img-fluid team-image"/>
-=======
-        <div class="col-sm team-member">
-          <img src="assets/images/image-placeholder.jpg" class="img-fluid team-image"/>
->>>>>>> 81670e9039ceb7170e5853e174d469b48bde4ee3
-          <p class="mt-2 mb-0 person-name">Jeff Onyemachi</p>
-          <p class="team-member-title">HR Member</p>
+          <img src="assets/images/team11.jpg" class="img-fluid team-image" />
+          <div class="col-sm team-member">
+            <img
+              src="assets/images/image-placeholder.jpg"
+              class="img-fluid team-image"
+            />
+            <p class="mt-2 mb-0 person-name">Jeff Onyemachi</p>
+            <p class="team-member-title">HR Member</p>
+          </div>
         </div>
       </div>
     </div>
-    
+
     <!-- <div id="sponsors" class="container">
       <div class="row text-center">
         <h2 class="pt-4 pb-0"><span class="nls">Sponsorship</span></h2>
@@ -495,7 +768,9 @@
     <div id="partners" class="container">
       <div class="row text-center">
         <!-- <h2 class="pt-4 pb-0"><span class="nls">Partners</span></h2> -->
-        <h2 class="pt-4 pb-0" ><span class="nls">Proudly organized and supported by</span></h2>
+        <h2 class="pt-4 pb-0">
+          <span class="nls">Proudly organized and supported by</span>
+        </h2>
         <div class="w-100 col text-center">
           <img
             src="/assets/partners/CougarCS.svg"
@@ -504,13 +779,18 @@
             alt="CougarCS Logo"
           />
         </div>
-         <div class="w-100 text-center pad-com">
-          <a href="http://miso411.com" rel="external" target="_blank" title="Guidance and Consulting by Miso411"><img
-            src="/assets/miso-logo-light-pink.svg"
-            loading="lazy"
-            width="150"
-            alt="Miso411 Logo"
-          />
+        <div class="w-100 text-center pad-com">
+          <a
+            href="http://miso411.com"
+            rel="external"
+            target="_blank"
+            title="Guidance and Consulting by Miso411"
+            ><img
+              src="/assets/miso-logo-light-pink.svg"
+              loading="lazy"
+              width="150"
+              alt="Miso411 Logo"
+            />
           </a>
         </div>
       </div>
@@ -523,7 +803,7 @@
           alt="Polygon cougar head"
           width="120"
         />
-        <p class="mt-2" style="font-size:20px;">
+        <p class="mt-2" style="font-size: 20px">
           Copyright &copy; CougarCS 2020
         </p>
       </div>
