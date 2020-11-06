@@ -13,7 +13,7 @@ registerBtn.addEventListener("click", () => {
   console.log("click");
 });
 
-//registerBtn.addEventListener("click", openModal);
+registerBtn.addEventListener("click", openModal);
 closeBtn.addEventListener("click", closeModal);
 window.addEventListener("click", closeModal);
 // submitBtn.addEventListener("click", closeModal);
