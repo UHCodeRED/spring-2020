@@ -51,16 +51,16 @@
             ><span class="nls">Volunteer</span></a
           > -->
 
-          <a href="https://uhcode.red/assets/CodeRed_Voyage_Info.pdf" class="arrow-btn w-100 mt-2 mb-2" target="_blank"
-            ><span class="nls">Schedule</span></a
+          <a href="https://cdn.discordapp.com/attachments/732754921870590043/774514506298032128/CodeRed_Voyage_nov_2020.jpg" class="arrow-btn w-100 mt-2 mb-2" target="_blank"
+          ><span class="nls">Schedule</span></a
           >
 
           <a href="#sponsors" class="arrow-btn w-100 mb-2 m"
             ><span class="nls">Sponsors</span></a
           >
 
-          <button type="button" class="arrow-btn w-100 nls mb-2" id="registerBtn" >
-            Register
+          <button type="button" class="arrow-btn w-100 nls mb-2" id="walkinOpenBtn" >
+            Walk-ins
           </button>
         </div>
       </div>
@@ -69,6 +69,23 @@
       <div class="gradient"></div>
     </div>
 
+    <div class="modal" tabindex="-1" role="dialog" id="walkinModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Walk-in Info</h5>
+          </div>
+          <div class="modal-body text-center">
+            <p>Please join our <a href="https://discord.gg/uPEjjDsX" target="_blank"><span class="nls font-weight-bold" >Discord server</span></a> for walk-ins!</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" id="walkinCloseBtn">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!--
     <div class="modal" tabindex="-1" role="dialog" id="regModal">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -285,25 +302,26 @@
             industry, come join us at CodeRED Voyage  to have fun, learn something 
             new, explore possibilities, solve problems, and build out your dreams without fear or doubt.
           </p>
-          <br/>
+          <br/>-->
           <!-- <div class="center-content" id="eventInfo">
             <div class="justify-content-center">
               <h3>Event Schedule will be released soon!</h3>
             </div>
           </div>
-          <br/> -->
-        </div>
+          <br/> 
+        </div>-->
 
         
         <!-- collapse -->
-        <div class="questionTitle"><strong>Frequently Asked Questions</strong></div>
+        <div class="container">
+          <div class="questionTitle"><strong>Frequently Asked Questions</strong></div>
         <div class="collapsible">Who can attend CodeRED?</div> 
         <div class="content">
           <p>Any undergraduate or graduate student from any school. Recent UH graduates are welcomed as well.</p>
         </div>
-        <div class="collapsible">What is the deadline to register?</div> 
+        <div class="collapsible">I was unable to register. Can I still participate?</div> 
         <div class="content">
-          <p>Registrations would close on <strong>November 4, 2020</strong>.</p>
+          <p>Don't worry we got you! Just use the walk-in link provided above <strong>before</strong> the hackathon kick off.</p>
         </div>
         <div class="collapsible">What if I am not experienced?</div>
         <div class="content">
@@ -327,6 +345,7 @@
         </div>
       </div>
     </div>
+        </div>
 
 
     <div id="sponsors" class="container">
@@ -528,5 +547,6 @@
     </footer>
     <script src="src/index.js"></script>
     <script src="src/registration.js"></script>
+    <script src="src/walkins.js"></script>
   </body>
 </html>
