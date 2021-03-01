@@ -15,7 +15,7 @@
     "googleapis": "39",
     "intersection-observer": "^0.7.0",
     "seed-random": "2.2.0",
-    "three": "0.103.0"
+    "three": "0.125.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-0",
